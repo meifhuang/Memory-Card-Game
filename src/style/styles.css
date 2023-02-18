@@ -1,0 +1,101 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.app { 
+    display: flex;
+    height: 100vh; 
+    flex-direction: column; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100vw;
+    border: 3px solid black; 
+    height: 12vh;  
+    background-color: #e4000f;
+    font-weight: 800; 
+    color: white; 
+}
+
+.footer {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 8vh;
+    width: 100vw;
+    background-color: black;
+    color: white; 
+}
+
+img {
+    width: 100px;
+    height: 100px; 
+}
+
+.card {
+    width: 160px; 
+    height: 200px; 
+    border-radius: 1em; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-around;
+    align-items: center; 
+    margin: 1.2em;
+    background-color:rgba(248, 250, 254, 0.844);
+    
+    box-shadow: 0px 2px 19px 2px rgba(171,151,151,0.81);
+    -webkit-box-shadow: 0px 2px 19px 2px rgba(171,151,151,0.81);
+    -moz-box-shadow: 0px 2px 19px 2px rgba(171,151,151,0.81);
+}
+
+.card:hover {
+    transform: scale(1.04);
+}
+
+.main {
+    display: flex;
+    width: 100vw;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.score {
+    display: flex; 
+    justify-self: start; 
+    margin: 1em;
+    border: 1px solid black; 
+    border-right: 10px solid #e4000f;
+    border-left: 10px solid #e4000f;
+}
+
+.score > * {
+    margin: 1.5em; 
+}
+
+button {
+    border-radius: 100%;
+    padding: 30px 3px;
+    border: 4px solid black; 
+    font-weight: 800;
+    background-color: #e4000f; 
+    color: black; 
+}
+
+b { 
+    color: white;
+    font-size: 15px;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
