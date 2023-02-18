@@ -2,7 +2,7 @@
 
 Odin Project - Memory card game created with React and <a href="https://pokeapi.co/"> Poke API </a>
 
-##Getting started
+## Getting started
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
