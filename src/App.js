@@ -20,10 +20,11 @@ export default function App() {
   }
 
   function playAgain() {
-    setStartGame(false)
+    setStartGame(true)
     setCurrentScore(0)
     setChosenCards([])
-    setBestScore(0)
+    //setBestScore(0)
+
     shuffle()
     setWinner(false)
   }
@@ -46,7 +47,7 @@ export default function App() {
     else {
       chosenCopy.push(id)
       setCurrentScore(prevScore => prevScore + 1)
-      if (currentScore === 13) {
+      if (currentScore === deck.length-1) {
           setWinner(true)
       }   
       if (currentScore === bestScore) {
@@ -71,10 +72,19 @@ export default function App() {
       setDeck(shuffledDeck)
   }
 
+
   React.useEffect(() => {
       const newDeck = []
+      let hash = {}
       for (let i = 1; i < 140; i+=10) {
-          const url = `https://pokeapi.co/api/v2/pokemon/${Math.ceil(Math.random() * i) + i+1}`
+          let rando = Math.ceil(Math.random() * i ) + i + i; 
+          if (hash[rando]) {
+            rando = Math.ceil(Math.random()*i) + 200
+          }
+          else {
+          hash[rando] = 1
+          }
+          const url = `https://pokeapi.co/api/v2/pokemon/${rando}`
           fetch(url)
           .then(res => res.json())
           .then(data => {
@@ -85,21 +95,23 @@ export default function App() {
             image: data.sprites.other.dream_world.front_default
           })
         setDeck(newDeck)
-        })}}
+        })}
+      }
       ,[])
 
   return (
    <div className="app">
       <Header/> 
       <Scoreboard currentScore={currentScore} bestScore={bestScore}/> 
+     { !winner ? <h5> Select your team without repeating any pokemon. Get to 14 points to win!  </h5> : <h3> YOU WIN ! </h3>} 
       <div className="main">
         {!startGame ? <button onClick={start}> Start <b> • </b> Game </button> : !winner ? 
         deck && (deck.map(card => (
           <Card chooseCard={(e)=>chooseCard(e)} id={card.id} key={card.id} image={card.image} name={card.name}/> )))
-          : <button onClick={playAgain}> play again </button>
+          : <button onClick={playAgain}> PLAY AGAIN </button> 
           }
           </div> 
-          <h5> Select your team without repeating any of them. </h5>
+          
       <Footer/> 
     </div> 
   );
