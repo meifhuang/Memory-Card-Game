@@ -45,32 +45,16 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<h5> Click start game to begin playing. </h5>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img width="948" alt="poke" src="https://github.com/meifhuang/Memory-Card-Game/assets/100555326/cd2a96b5-ee80-4179-87f7-45988f89788d">
 
-### Code Splitting
+<p> Click on any Pokemon to begin.  <br>
+  Each time a unique Pokemon is chosen, one point will be added to the current score.
+  Choosing a Pokemon that had already been clicked before will reset the current score. 
+  The best score will persist as long as the page is not refreshed. </p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<img width="944" alt="pokee" src="https://github.com/meifhuang/Memory-Card-Game/assets/100555326/4f317436-5c60-477b-97b1-5964ac7a9f82">
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
